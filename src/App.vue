@@ -1,26 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <HeaderPage />
+  <ReleasePage />
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import HeaderPage from './views/Header/HeaderPage.vue';
+import ReleasePage from './views/Release/ReleasePage.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    HeaderPage,
+    ReleasePage
+  },
+  mounted() {
+    document.title = 'Musiki';
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+body {
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-family: "Montserrat", serif !important;
 }
 </style>
